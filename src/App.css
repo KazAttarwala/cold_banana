@@ -36,3 +36,52 @@
     transform: rotate(360deg);
   }
 }
+
+#Navbar {
+    float: right;
+}
+
+#Nav-section {
+    margin-top: 4%;
+}
+
+.Brand-name {
+    float: left;
+}
+
+#Hero-space {
+    margin-top: 15%;
+    margin-left: 25%;
+    width: 35%
+}
+
+.Header {
+    margin-bottom: 20px;
+}
+
+.Info-button {
+    margin-top: 10px;
+    border-radius: 20px !important;
+    width: 150px;
+}
+
+#Secondary-info {
+    margin-top: 20%;
+    margin-bottom: 25%;
+    width: 50%
+}
+
+.Product-image {
+    border-radius: 10% !important
+}
+
+.Product-card {
+    border-radius: 10% !important;
+    margin-bottom: 50px;
+}
+
+.Login-button {
+    border-radius: 20px !important;
+    width: 150px;
+    margin-left: 60px;
+}

@@ -12,188 +12,147 @@ import { TbBrandYoutube } from 'react-icons/tb';
 import { AiOutlineFacebook } from 'react-icons/ai';
 import { TbBrandInstagram } from 'react-icons/tb';
 import { IoLogoTiktok } from 'react-icons/io5';
-
-const array =
-    [
-        {
-            "id": 1,
-            "product_name": "semper interdum mauris",
-            "image": "http://dummyimage.com/281x278.png/5fa2dd/ffffff",
-            "price": 86.87,
-            "stock_count": 20
-        },
-        {
-            "id": 2,
-            "product_name": "suspendisse",
-            "image": "http://dummyimage.com/258x344.png/dddddd/000000",
-            "price": 4.72,
-            "stock_count": 87
-        },
-        {
-            "id": 3,
-            "product_name": "cubilia curae donec",
-            "image": "http://dummyimage.com/266x300.png/5fa2dd/ffffff",
-            "price": 97,
-            "stock_count": 79
-        },
-        {
-            "id": 4,
-            "product_name": "fusce",
-            "image": "http://dummyimage.com/257x325.png/5fa2dd/ffffff",
-            "price": 4.26,
-            "stock_count": 0
-        },
-        {
-            "id": 5,
-            "product_name": "tristique est",
-            "image": "http://dummyimage.com/284x343.png/cc0000/ffffff",
-            "price": 93.91,
-            "stock_count": 39
-        },
-        {
-            "id": 6,
-            "product_name": "semper rutrum nulla",
-            "image": "http://dummyimage.com/257x292.png/cc0000/ffffff",
-            "price": 35.3,
-            "stock_count": 6
-        },
-        {
-            "id": 7,
-            "product_name": "cubilia curae",
-            "image": "http://dummyimage.com/339x287.png/cc0000/ffffff",
-            "price": 27.08,
-            "stock_count": 19
-        },
-        {
-            "id": 8,
-            "product_name": "sagittis nam",
-            "image": "http://dummyimage.com/345x306.png/ff4444/ffffff",
-            "price": 80.65,
-            "stock_count": 38
-        },
-        {
-            "id": 9,
-            "product_name": "mauris morbi non",
-            "image": "http://dummyimage.com/340x254.png/dddddd/000000",
-            "price": 23.04,
-            "stock_count": 43
-        },
-        {
-            "id": 10,
-            "product_name": "pretium nisl",
-            "image": "http://dummyimage.com/324x309.png/cc0000/ffffff",
-            "price": 4.42,
-            "stock_count": 58
-        }
-    ]
+import { useState, useEffect } from "react";
+import axios from "axios"
 
 function App() {
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+        const getProducts = async () => {
+            const response = await axios.get(
+                `https://my-json-server.typicode.com/TomSearle/cb-devtest-api/products`
+            );
+            setProducts(response.data[0]);
+        };
+        getProducts();
+    }, []);
+
     return (
-        <div className="App">
-            <h2>CHILLED GRAPE</h2>
-            <Nav
-                activeKey="/home"
-                onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
-            >
-                <Nav.Item>
-                    <Nav.Link href="/home">Active</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="link-1">Link</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="link-2">Link</Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="disabled" disabled>
-                        Disabled
-                    </Nav.Link>
-                </Nav.Item>
-                <Button variant="primary">Login</Button>
-            </Nav>
-            <section>
-                <h1>LOREM IPSUM DOLOR</h1>
-                <Button variant="primary">Read More</Button>
-            </section>
-            <section>
-                <h2>LOREM IPSUM</h2>
-                <p>lorem psim fjshf fjhsf jshgkjshgks</p>
-                <Button variant="primary">Read More</Button>
-            </section>
-            <Container>
-                <Row lg={3}>
-                    {array.map(x => <ProductCard id={x.id} image={x.image} name={x.product_name} price={x.price} />)}
-                </Row>
-            </Container>
+        <Container>
+            <div id="Nav-section">
+                <h2 className="Brand-name"><strong>CHILLED GRAPE</strong></h2>
+                <Nav
+                    activeKey="/home"
+                    onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
+                    id="Navbar"
+                >
+                    <Nav.Item>
+                        <Nav.Link>Home</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link>About</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link>Blog</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                        <Nav.Link>Pricing</Nav.Link>
+                    </Nav.Item>
+                    <Button className="Login-button" variant="primary">Login</Button>
+                </Nav>
+            </div>
+            <br></br>
+            <div id="Hero-space">
+                <h1><strong>LOREM IPSUM DOLOR SIT AMET.</strong></h1>
+                <Button className="Info-button" variant="primary">Read More</Button>
+            </div>
+            <div id="Info-graphic-section" width="100%">
+                <div id="Secondary-info">
+                    <h2 className="Header"><strong>LOREM IPSUM DOLOR SIT AMET.</strong></h2>
+                    <p>
+                        <strong>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Posuere sollicitudin aliquam ultrices sagittis.
+                            Nibh tellus molestie nunc non.
+                        </strong>
+                    </p>
+
+                    <Button className="Info-button" variant="primary">Read More</Button>
+
+                </div>
+                <div>
+                    <img src={require("./plant.png")} width="50%" />
+
+                </div>
+            </div>
+            <Row lg={3}>
+                {products.map(x => <ProductCard id={x.id} image={x.image} name={x.product_name} price={x.price} />)}
+            </Row>
             <h3>Load More</h3>
-            <Container>
-                <Row>
-                    <Col>
-                        <h3>CHILLED GRAPE</h3>
-                        <p>Lorem ipsum</p>
-                    </Col>
-                    <Col>
-                        <ul>
-                            <li>
-                                <h6>Company</h6>
-                            </li>
-                            <li>
-                                About
-                            </li>
-                            <li>
-                                Careers
-                            </li>
-                            <li>
-                                Our Work
-                            </li>
-                            <li>
-                                Contact
-                            </li>
-                        </ul>
-                    </Col>
-                    <Col>
-                        <ul>
-                            <li>
-                                <h6>Products</h6>
-                            </li>
-                            <li>
-                                About
-                            </li>
-                            <li>
-                                Careers
-                            </li>
-                            <li>
-                                Our Work
-                            </li>
-                            <li>
-                                Contact
-                            </li>
-                        </ul>
-                    </Col>
-                    <Col>
-                        <h6>Follow Us</h6>
-                        <Row>
-                            <Col><FaTelegramPlane /></Col>
-                            <Col><TbBrandTwitter /></Col>
-                            <Col><TbBrandYoutube /></Col>
-                        </Row>
-                        <Row>
-                            <Col><AiOutlineFacebook /></Col>
-                            <Col><TbBrandInstagram /></Col>
-                            <Col><IoLogoTiktok /></Col>
-                        </Row>
-                    </Col>
-                </Row>
-            </Container>
-        </div >
+            <Row>
+                <Col>
+                    <h3>CHILLED GRAPE</h3>
+                    <p>Lorem ipsum</p>
+                </Col>
+                <Col>
+                    <ul>
+                        <li>
+                            <h6>Company</h6>
+                        </li>
+                        <li>
+                            About
+                        </li>
+                        <li>
+                            Careers
+                        </li>
+                        <li>
+                            Our Work
+                        </li>
+                        <li>
+                            Contact
+                        </li>
+                    </ul>
+                </Col>
+                <Col>
+                    <ul>
+                        <li>
+                            <h6>Products</h6>
+                        </li>
+                        <li>
+                            About
+                        </li>
+                        <li>
+                            Careers
+                        </li>
+                        <li>
+                            Our Work
+                        </li>
+                        <li>
+                            Contact
+                        </li>
+                    </ul>
+                </Col>
+                <Col>
+                    <h6>Follow Us</h6>
+                    <Row>
+                        <Col><FaTelegramPlane /></Col>
+                        <Col><TbBrandTwitter /></Col>
+                        <Col><TbBrandYoutube /></Col>
+                    </Row>
+                    <Row>
+                        <Col><AiOutlineFacebook /></Col>
+                        <Col><TbBrandInstagram /></Col>
+                        <Col><IoLogoTiktok /></Col>
+                    </Row>
+                </Col>
+            </Row>
+        </Container>
     );
 }
 
 function ProductCard(props) {
+    //const imgHeightStartPos = props.image.search('\\d+x');
+    //const imgHeight = props.image.substring(imgHeightStartPos, imgHeightStartPos + 3);
+    //const imgWidthStartPos = props.image.search('x\\d') + 1;
+    //const imgWidth = props.image.substring(imgWidthStartPos, imgWidthStartPos + 3);
+    //const scale = 32.0 / Math.max(imgWidth, imgHeight);
+    //const scaledHeight = Math.round(imgHeight * scale, 0);
+    //const scaledWidth = Math.round(imgWidth * scale, 0);
+    //const ratio = Math.min(200 / imgWidth, 200 / imgHeight);
     return (
         <Col className="d-flex">
-            <Card className="flex-fill" key={props.id}>
-                <Card.Img variant="top" src={props.image} />
+            <Card className="flex-fill mb-5" key={props.id} className="Product-card">
+                <Card.Img variant="top" src={props.image} className="Product-image" />
                 <Card.Body>
                     <Card.Title>{props.name}</Card.Title>
                     <Card.Text>
