@@ -95,7 +95,7 @@
 }
 
 .Secondary-info {
-    margin-top: 20%;
+    margin-top: 300px;
     margin-bottom: 25%;
     width: 50%;
     font-family: 'Poppins';
@@ -170,4 +170,8 @@
     width: 24px;
     height: 24px;
     color: white;
+}
+
+#Footer-content {
+    margin-top: 150px;
 }

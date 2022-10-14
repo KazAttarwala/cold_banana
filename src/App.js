@@ -77,10 +77,10 @@ function App() {
                 {products.map(x => <ProductCard id={x.id} image={x.image} name={x.product_name} price={x.price} />)}
             </Row>
             <h3 id='Load-more-btn'><strong>Load More</strong></h3>
-            <Row>
+            <Row id="Footer-content">
                 <Col md={6}>
                     <h2><strong>CHILLED GRAPE</strong></h2>
-                    <p className="Secondary-info">
+                    <p className="Secondary-info" style={{ width: '100%', marginTop: '25px' }}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Posuere sollicitudin aliquam ultrices sagittis.
                         Nibh tellus molestie nunc non.
