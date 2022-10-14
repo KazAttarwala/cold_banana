@@ -37,16 +37,38 @@
   }
 }
 
-#Navbar {
-    float: right;
+.Nav-link {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    line-height: 24px;
+    text-align: center;
+    color: #212121 !important;
+    text-decoration: none;
 }
 
 #Nav-section {
     margin-top: 4%;
 }
 
-.Brand-name {
+#Brand-name {
     float: left;
+}
+
+#Brand-header-blob {
+    background: linear-gradient(90deg, #73E0A9 0%, #5B68DF 100%);
+    transform: rotate(-15deg);
+    background-color: #73E0A9;
+    width: 567px;
+    height: 450px;
+    position: absolute;
+    /*left: 5.77%;
+    right: 65.57%;
+    top: 13.18%;
+    bottom: 46.33%;*/
+    border-bottom-left-radius: 300px;
+    border-bottom-right-radius: 500px;
 }
 
 #Hero-space {
@@ -63,12 +85,24 @@
     margin-top: 10px;
     border-radius: 20px !important;
     width: 150px;
+    background: linear-gradient(90deg, #73E0A9 0%, #5B68DF 100%);
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
 }
 
-#Secondary-info {
+.Secondary-info {
     margin-top: 20%;
     margin-bottom: 25%;
-    width: 50%
+    width: 50%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
 }
 
 .Product-image {
@@ -84,4 +118,41 @@
     border-radius: 20px !important;
     width: 150px;
     margin-left: 60px;
+    background: linear-gradient(90deg, #73E0A9 0%, #5B68DF 100%);
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.About-header {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    background: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.About-list {
+    list-style-type: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #212121;
+}
+
+#Load-more-btn {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #5C6DDE;
 }

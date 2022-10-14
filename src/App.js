@@ -30,44 +30,42 @@ function App() {
     return (
         <Container>
             <div id="Nav-section">
-                <h2 className="Brand-name"><strong>CHILLED GRAPE</strong></h2>
+                <div id="Brand-header-blob">
+                    <h2 id="Brand-name"><strong>CHILLED GRAPE</strong></h2>
+                </div>
                 <Nav
-                    activeKey="/home"
-                    onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
-                    id="Navbar"
+                    className="justify-content-end"
                 >
                     <Nav.Item>
-                        <Nav.Link>Home</Nav.Link>
+                        <Nav.Link className="Nav-link">Home</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link>About</Nav.Link>
+                        <Nav.Link className="Nav-link">About</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link>Blog</Nav.Link>
+                        <Nav.Link className="Nav-link">Blog</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link>Pricing</Nav.Link>
+                        <Nav.Link className="Nav-link">Pricing</Nav.Link>
                     </Nav.Item>
-                    <Button className="Login-button" variant="primary">Login</Button>
+                    <Button className="Login-button"><strong>Login</strong></Button>
                 </Nav>
             </div>
             <br></br>
             <div id="Hero-space">
                 <h1><strong>LOREM IPSUM DOLOR SIT AMET.</strong></h1>
-                <Button className="Info-button" variant="primary">Read More</Button>
+                <Button className="Info-button"><strong>Read More</strong></Button>
             </div>
             <div id="Info-graphic-section" width="100%">
-                <div id="Secondary-info">
+                <div className="Secondary-info">
                     <h2 className="Header"><strong>LOREM IPSUM DOLOR SIT AMET.</strong></h2>
                     <p>
-                        <strong>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Posuere sollicitudin aliquam ultrices sagittis.
-                            Nibh tellus molestie nunc non.
-                        </strong>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Posuere sollicitudin aliquam ultrices sagittis.
+                        Nibh tellus molestie nunc non.
                     </p>
 
-                    <Button className="Info-button" variant="primary">Read More</Button>
+                    <Button className="Info-button"><strong>Read More</strong></Button>
 
                 </div>
                 <div>
@@ -78,16 +76,20 @@ function App() {
             <Row lg={3}>
                 {products.map(x => <ProductCard id={x.id} image={x.image} name={x.product_name} price={x.price} />)}
             </Row>
-            <h3>Load More</h3>
+            <h3 id='Load-more-btn'><strong>Load More</strong></h3>
             <Row>
-                <Col>
-                    <h3>CHILLED GRAPE</h3>
-                    <p>Lorem ipsum</p>
+                <Col md={6}>
+                    <h2><strong>CHILLED GRAPE</strong></h2>
+                    <p className="Secondary-info">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Posuere sollicitudin aliquam ultrices sagittis.
+                        Nibh tellus molestie nunc non.
+                    </p>
                 </Col>
-                <Col>
-                    <ul>
+                <Col md={2}>
+                    <ul className="About-list">
                         <li>
-                            <h6>Company</h6>
+                            <h6 className="About-header"><strong>Company</strong></h6>
                         </li>
                         <li>
                             About
@@ -103,10 +105,10 @@ function App() {
                         </li>
                     </ul>
                 </Col>
-                <Col>
-                    <ul>
+                <Col md={2}>
+                    <ul className="About-list">
                         <li>
-                            <h6>Products</h6>
+                            <h6 className="About-header"><strong>Products</strong></h6>
                         </li>
                         <li>
                             About
@@ -122,8 +124,8 @@ function App() {
                         </li>
                     </ul>
                 </Col>
-                <Col>
-                    <h6>Follow Us</h6>
+                <Col md={2}>
+                    <h6 className="About-header"><strong>Follow Us</strong></h6>
                     <Row>
                         <Col><FaTelegramPlane /></Col>
                         <Col><TbBrandTwitter /></Col>
