@@ -9,7 +9,7 @@ import Container from 'react-bootstrap/Container';
 import { FaTelegramPlane } from 'react-icons/fa';
 import { TbBrandTwitter } from 'react-icons/tb';
 import { TbBrandYoutube } from 'react-icons/tb';
-import { AiOutlineFacebook } from 'react-icons/ai';
+import { RiFacebookBoxLine } from 'react-icons/ri';
 import { TbBrandInstagram } from 'react-icons/tb';
 import { IoLogoTiktok } from 'react-icons/io5';
 import { useState, useEffect } from "react";
@@ -127,14 +127,38 @@ function App() {
                 <Col md={2}>
                     <h6 className="About-header"><strong>Follow Us</strong></h6>
                     <Row>
-                        <Col><FaTelegramPlane /></Col>
-                        <Col><TbBrandTwitter /></Col>
-                        <Col><TbBrandYoutube /></Col>
+                        <Col>
+                            <div className="Social-icon-box">
+                                <FaTelegramPlane className="Social-icon" />
+                            </div>
+                        </Col>
+                        <Col>
+                            <div className="Social-icon-box">
+                                <TbBrandTwitter className="Social-icon" />
+                            </div>
+                        </Col>
+                        <Col>
+                            <div className="Social-icon-box">
+                                <TbBrandYoutube className="Social-icon" />
+                            </div>
+                        </Col>
                     </Row>
                     <Row>
-                        <Col><AiOutlineFacebook /></Col>
-                        <Col><TbBrandInstagram /></Col>
-                        <Col><IoLogoTiktok /></Col>
+                        <Col>
+                            <div className="Social-icon-box">
+                                <RiFacebookBoxLine className="Social-icon" />
+                            </div>
+                        </Col>
+                        <Col>
+                            <div className="Social-icon-box">
+                                <TbBrandInstagram className="Social-icon" />
+                            </div>
+                        </Col>
+                        <Col>
+                            <div className="Social-icon-box">
+                                <IoLogoTiktok className="Social-icon" />
+                            </div>
+                        </Col>
                     </Row>
                 </Col>
             </Row>

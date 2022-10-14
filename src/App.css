@@ -156,3 +156,18 @@
     line-height: 36px;
     color: #5C6DDE;
 }
+
+.Social-icon-box {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(90deg, #73E0A9 0%, #5B68DF 100%);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.Social-icon {
+    width: 24px;
+    height: 24px;
+    color: white;
+}
