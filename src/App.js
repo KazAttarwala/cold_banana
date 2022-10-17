@@ -30,9 +30,6 @@ function App() {
     return (
         <Container>
             <div id="Nav-section">
-                <div id="Brand-header-blob">
-                    <h2 id="Brand-name"><strong>CHILLED GRAPE</strong></h2>
-                </div>
                 <Nav
                     className="justify-content-end"
                 >
@@ -48,29 +45,29 @@ function App() {
                     <Nav.Item>
                         <Nav.Link className="Nav-link">Pricing</Nav.Link>
                     </Nav.Item>
-                    <Button className="Login-button"><strong>Login</strong></Button>
+                    <Button variant="light" id="Login-button"><strong>Login</strong></Button>
                 </Nav>
+                <div id="Brand-header-blob">
+                    <h2 id="Brand-name">CHILLED GRAPE</h2>
+                </div>
             </div>
             <br></br>
             <div id="Hero-space">
                 <h1><strong>LOREM IPSUM DOLOR SIT AMET.</strong></h1>
-                <Button className="Info-button"><strong>Read More</strong></Button>
+                <Button variant="light" className="Info-button">Read More</Button>
             </div>
             <div id="Info-graphic-section" width="100%">
                 <div className="Secondary-info">
-                    <h2 className="Header"><strong>LOREM IPSUM DOLOR SIT AMET.</strong></h2>
+                    <h2><strong>LOREM IPSUM DOLOR SIT AMET.</strong></h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Posuere sollicitudin aliquam ultrices sagittis.
                         Nibh tellus molestie nunc non.
                     </p>
-
-                    <Button className="Info-button"><strong>Read More</strong></Button>
-
+                    <Button variant="light" className="Info-button">Read More</Button>
                 </div>
                 <div>
                     <img src={require("./plant.png")} width="50%" />
-
                 </div>
             </div>
             <Row lg={3}>
@@ -79,28 +76,41 @@ function App() {
             <h3 id='Load-more-btn'><strong>Load More</strong></h3>
             <Row id="Footer-content">
                 <Col md={6}>
-                    <h2><strong>CHILLED GRAPE</strong></h2>
-                    <p className="Secondary-info" style={{ width: '100%', marginTop: '25px' }}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Posuere sollicitudin aliquam ultrices sagittis.
-                        Nibh tellus molestie nunc non.
-                    </p>
+                    <div id="Blob-bottom">
+                        <h2 id="Bottom-brand-name">CHILLED GRAPE</h2>
+                        <p
+                            className="Secondary-info"
+                            style={
+                                {
+                                    width: '600px',
+                                    height: '132px',
+                                    paddingLeft: '75px',
+                                    marginTop: '150px',
+                                    color: 'white',
+                                    position: 'absolute',
+                                }
+                            }
+                        >
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                        </p>
+                    </div>
                 </Col>
                 <Col md={2}>
                     <ul className="About-list">
                         <li>
                             <h6 className="About-header"><strong>Company</strong></h6>
                         </li>
-                        <li>
+                        <li className="About-links">
                             About
                         </li>
-                        <li>
+                        <li className="About-links">
                             Careers
                         </li>
-                        <li>
+                        <li className="About-links">
                             Our Work
                         </li>
-                        <li>
+                        <li className="About-links">
                             Contact
                         </li>
                     </ul>
@@ -110,16 +120,16 @@ function App() {
                         <li>
                             <h6 className="About-header"><strong>Products</strong></h6>
                         </li>
-                        <li>
+                        <li className="About-links">
                             About
                         </li>
-                        <li>
+                        <li className="About-links">
                             Careers
                         </li>
-                        <li>
+                        <li className="About-links">
                             Our Work
                         </li>
-                        <li>
+                        <li className="About-links">
                             Contact
                         </li>
                     </ul>

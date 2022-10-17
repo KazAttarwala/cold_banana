@@ -38,7 +38,7 @@
 }
 
 .Nav-link {
-    font-family: 'Poppins';
+    font-family: Poppins;
     font-style: normal;
     font-weight: 600 !important;
     font-size: 16px !important;
@@ -54,27 +54,62 @@
 
 #Brand-name {
     float: left;
+    position: absolute;
+    top: 130px;
+    left: 70px;
+    transform: rotate(15deg) !important;
+    color: white;
+    z-index: 10;
+    font-family: Poppins !important;
+    font-weight: 700 !important;
+    font-size: 36px !important;
+    line-height: 54px !important;
+}
+
+#Bottom-brand-name {
+    position: absolute;
+    color: white;
+    z-index: 10;
+    font-family: Poppins !important;
+    font-weight: 700 !important;
+    font-size: 36px !important;
+    line-height: 54px !important;
+    padding-left: 75px;
+    padding-top: 80px;
 }
 
 #Brand-header-blob {
-    background: linear-gradient(90deg, #73E0A9 0%, #5B68DF 100%);
+    background-image: linear-gradient(90deg, #73E0A9 0%, #5B68DF 100%);
     transform: rotate(-15deg);
-    background-color: #73E0A9;
+    /* tried to experiment here to get the exact shape of the blob but couldn't get it to work
+        background: 
+        radial-gradient(circle 20px at -60% 80%,transparent,transparent 100px,#73E0A9 100px), 
+        radial-gradient(circle 20px at 120% 80%,transparent,transparent 100px,#5B68DF 100px);*/
     width: 567px;
     height: 450px;
-    position: absolute;
-    /*left: 5.77%;
-    right: 65.57%;
-    top: 13.18%;
-    bottom: 46.33%;*/
-    border-bottom-left-radius: 300px;
-    border-bottom-right-radius: 500px;
+    border-radius: 100px 500px 300px 500px / 100px 300px 300px 300px;
+    position: relative;
+    margin-top: -200px;
+}
+
+#Blob-bottom {
+    background-image: linear-gradient(90deg, #5B68DF 0%, #73E0A9 100%);
+    /* tried to experiment here to get the exact shape of the blob but couldn't get it to work
+        background: 
+        radial-gradient(circle 20px at -60% 80%,transparent,transparent 100px,#73E0A9 100px), 
+        radial-gradient(circle 20px at 120% 80%,transparent,transparent 100px,#5B68DF 100px);*/
+    width: 600px;
+    height: 350px;
+    border-radius: 200px 200px 200px 100px / 200px 300px 200px 100px;
+    position: relative;
 }
 
 #Hero-space {
     margin-top: 15%;
     margin-left: 25%;
-    width: 35%
+    width: 35%; 
+    font-family: Poppins !important;
+    color: #212121;
 }
 
 .Header {
@@ -86,19 +121,20 @@
     border-radius: 20px !important;
     width: 150px;
     background: linear-gradient(90deg, #73E0A9 0%, #5B68DF 100%);
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
+    font-family: Poppins !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    text-align: center !important;
+    color: white !important;
 }
 
 .Secondary-info {
     margin-top: 300px;
     margin-bottom: 25%;
     width: 50%;
-    font-family: 'Poppins';
+    font-family: Poppins;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -114,21 +150,22 @@
     margin-bottom: 50px;
 }
 
-.Login-button {
+#Login-button {
     border-radius: 20px !important;
     width: 150px;
     margin-left: 60px;
     background: linear-gradient(90deg, #73E0A9 0%, #5B68DF 100%);
-    font-family: 'Poppins';
+    font-family: Poppins;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
     text-align: center;
+    color: white;
 }
 
 .About-header {
-    font-family: 'Poppins';
+    font-family: Poppins;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -136,11 +173,12 @@
     background: linear-gradient(90.71deg, #73E0A9 0%, #5B68DF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding-top: 80px;
 }
 
 .About-list {
     list-style-type: none;
-    font-family: 'Poppins';
+    font-family: Poppins;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -148,8 +186,12 @@
     color: #212121;
 }
 
+/*.About-links {
+    paddi
+}*/
+
 #Load-more-btn {
-    font-family: 'Poppins';
+    font-family: Poppins;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -173,5 +215,5 @@
 }
 
 #Footer-content {
-    margin-top: 150px;
+    margin-top: 50px;
 }
