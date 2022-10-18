@@ -178,6 +178,8 @@ function App() {
 
 function ProductCard(props) {
     //Was trying to standardize the img sizes but couldn't make it work
+    //The API did not give me images as seen in the sample webpage and I reached out by email about this but did not get a response
+    //so I proceeded with the blank images returned from the API.
 
     //const imgHeightStartPos = props.image.search('\\d+x');
     //const imgHeight = props.image.substring(imgHeightStartPos, imgHeightStartPos + 3);
