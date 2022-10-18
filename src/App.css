@@ -164,12 +164,24 @@
 }
 
 .Product-image {
-    border-radius: 10% !important;
+    border-radius: 30px !important;
+    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.25)) !important
 }
 
 .Product-card {
-    border-radius: 10% !important;
+    border-radius: 30px !important;
+    box-shadow: 0px 4px 20px 5px rgba(0, 0, 0, 0.15) !important;
     margin-bottom: 50px;
+}
+
+.Product-card-title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700 !important;
+    font-size: 24px !important;
+    line-height: 36px !important;
+    color: #212121;
+    text-transform: uppercase;
 }
 
 #Login-button {
@@ -241,5 +253,5 @@
 }
 
 #Footer-content {
-    margin-top: 50px;
+    margin-top: 250px;
 }

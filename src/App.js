@@ -177,6 +177,8 @@ function App() {
 }
 
 function ProductCard(props) {
+    //Was trying to standardize the img sizes but couldn't make it work
+
     //const imgHeightStartPos = props.image.search('\\d+x');
     //const imgHeight = props.image.substring(imgHeightStartPos, imgHeightStartPos + 3);
     //const imgWidthStartPos = props.image.search('x\\d') + 1;
@@ -190,9 +192,9 @@ function ProductCard(props) {
             <Card className="flex-fill mb-5" key={props.id} className="Product-card">
                 <Card.Img variant="top" src={props.image} className="Product-image" />
                 <Card.Body>
-                    <Card.Title>{props.name}</Card.Title>
-                    <Card.Text>
-                        {props.price}
+                    <Card.Title className="Product-card-title">{props.name}</Card.Title>
+                    <Card.Text className="Product-card-title" style={{ color: '#747474' }}>
+                        {'\u00A3' + props.price}
                     </Card.Text>
                 </Card.Body>
             </Card>
