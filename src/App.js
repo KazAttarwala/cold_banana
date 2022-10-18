@@ -56,7 +56,7 @@ function App() {
                 <h1><strong>LOREM IPSUM DOLOR SIT AMET.</strong></h1>
                 <Button variant="light" className="Info-button">Read More</Button>
             </div>
-            <div id="Info-graphic-section" width="100%">
+            <div id="Info-graphic-section">
                 <div className="Secondary-info">
                     <h2><strong>LOREM IPSUM DOLOR SIT AMET.</strong></h2>
                     <p>
@@ -66,8 +66,8 @@ function App() {
                     </p>
                     <Button variant="light" className="Info-button">Read More</Button>
                 </div>
-                <div>
-                    <img src={require("./plant.png")} width="50%" />
+                <div id="Info-graphic-blob">
+                    <img id="Info-graphic" src={require("./plant.png")} />
                 </div>
             </div>
             <Row lg={3}>

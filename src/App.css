@@ -118,6 +118,7 @@
 
 .Info-button {
     margin-top: 10px;
+    margin-bottom: 300px;
     border-radius: 20px !important;
     width: 150px;
     background: linear-gradient(90deg, #73E0A9 0%, #5B68DF 100%);
@@ -131,18 +132,39 @@
 }
 
 .Secondary-info {
-    margin-top: 300px;
-    margin-bottom: 25%;
     width: 50%;
     font-family: Poppins;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 36px;
+    display: inline-block;
+}
+
+#Info-graphic {
+    float: right;
+    position: absolute;
+    z-index: 10;
+    mix-blend-mode: darken;
+    bottom: 100px;
+}
+
+#Info-graphic-blob {
+    background-image: linear-gradient(90deg, #73E0A9 0%, #5B68DF 100%);
+    /* tried to experiment here to get the exact shape of the blob but couldn't get it to work
+        background: 
+        radial-gradient(circle 20px at -60% 80%,transparent,transparent 100px,#73E0A9 100px), 
+        radial-gradient(circle 20px at 120% 80%,transparent,transparent 100px,#5B68DF 100px);*/
+    width: 400px;
+    height: 400px;
+    border-radius: 200px 300px 500px 400px / 200px 300px 300px 100px;
+    position: relative;
+    display: inline-block;
+    margin-left: 200px;
 }
 
 .Product-image {
-    border-radius: 10% !important
+    border-radius: 10% !important;
 }
 
 .Product-card {
