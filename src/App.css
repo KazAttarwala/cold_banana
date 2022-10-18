@@ -186,9 +186,9 @@
     color: #212121;
 }
 
-/*.About-links {
-    paddi
-}*/
+.About-links {
+    padding-top: 11px;
+}
 
 #Load-more-btn {
     font-family: Poppins;
@@ -209,8 +209,8 @@
 }
 
 .Social-icon {
-    width: 24px;
-    height: 24px;
+    width: 55%;
+    height: auto;
     color: white;
 }
 
