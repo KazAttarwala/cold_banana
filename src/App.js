@@ -136,7 +136,7 @@ function App() {
                 </Col>
                 <Col md={2}>
                     <h6 className="About-header"><strong>Follow Us</strong></h6>
-                    <Row>
+                    <Row className="Social-icon-row">
                         <Col>
                             <div className="Social-icon-box">
                                 <FaTelegramPlane className="Social-icon" />
@@ -153,7 +153,7 @@ function App() {
                             </div>
                         </Col>
                     </Row>
-                    <Row>
+                    <Row className="Social-icon-row">
                         <Col>
                             <div className="Social-icon-box">
                                 <RiFacebookBoxLine className="Social-icon" />
