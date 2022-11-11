@@ -16,7 +16,7 @@ import { useState, useEffect } from "react";
 import axios from "axios"
 
 function App() {
-    const [products, setProducts] = useState([]);
+    const [products, setProducts]: any[] = useState([]);
     useEffect(() => {
         const getProducts = async () => {
             const response = await axios.get(
@@ -71,7 +71,7 @@ function App() {
                 </div>
             </div>
             <Row lg={3}>
-                {products.map(x => <ProductCard id={x.id} image={x.image} name={x.product_name} price={x.price} />)}
+                {products.map((x: ProductCard) => <ProductCard id={x.id} image={x.image} product_name={x.product_name} price={x.price} />)}
             </Row>
             <h3 id='Load-more-btn'><strong>Load More</strong></h3>
             <Row id="Footer-content">
@@ -176,7 +176,14 @@ function App() {
     );
 }
 
-function ProductCard(props) {
+interface ProductCard {
+    id: number,
+    image: string,
+    price: number,
+    product_name: string
+}
+
+function ProductCard(props: ProductCard) {
     //Was trying to standardize the img sizes but couldn't make it work
     //The API did not give me images as seen in the sample webpage and I reached out by email about this but did not get a response
     //so I proceeded with the blank images returned from the API.
@@ -191,10 +198,10 @@ function ProductCard(props) {
     //const ratio = Math.min(200 / imgWidth, 200 / imgHeight);
     return (
         <Col className="d-flex">
-            <Card className="flex-fill mb-5" key={props.id} className="Product-card">
+            <Card className="flex-fill mb-5 Product-card" key={props.id}>
                 <Card.Img variant="top" src={props.image} className="Product-image" />
                 <Card.Body>
-                    <Card.Title className="Product-card-title">{props.name}</Card.Title>
+                    <Card.Title className="Product-card-title">{props.product_name}</Card.Title>
                     <Card.Text className="Product-card-title" style={{ color: '#747474' }}>
                         {'\u00A3' + props.price}
                     </Card.Text>
